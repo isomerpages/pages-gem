@@ -7,8 +7,8 @@ module GitHubPages
   class Dependencies
     VERSIONS = {
       # Jekyll
-      "jekyll" => "3.9.0",
-      "jekyll-sass-converter" => "1.5.2",
+      "jekyll" => "4.1.1",
+      "jekyll-sass-converter" => "2.1.0",
 
       # Converters
       "kramdown" => "2.3.0",
@@ -38,7 +38,7 @@ module GitHubPages
       "jekyll-relative-links" => "0.6.1",
       "jekyll-optional-front-matter" => "0.3.2",
       "jekyll-readme-index" => "0.3.0",
-      "jekyll-default-layout" => "0.1.4",
+      "jekyll-default-layout" => "0.1.5",
       "jekyll-titles-from-headings" => "0.5.3",
     }.freeze
 
@@ -57,7 +57,7 @@ module GitHubPages
 
     def self.version_report
       require "html/pipeline/version"
-      require "sass/version"
+      require "sassc/version"
       require "safe_yaml/version"
       require "nokogiri"
 
@@ -67,7 +67,7 @@ module GitHubPages
         # Gem versions we're curious about
         "github-pages" => VERSION.to_s,
         "html-pipeline" => HTML::Pipeline::VERSION,
-        "sass" => Sass.version[:number],
+        "sassc" => SassC::VERSION,
         "safe_yaml" => SafeYAML::VERSION,
         "nokogiri" => Nokogiri::VERSION,
       }
